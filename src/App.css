@@ -1,0 +1,35 @@
+.App {
+  text-align: center;
+}
+
+.container {
+  margin-left: 10vw;
+  margin-right: 10vw;
+  margin-top: 5vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  width: 80%;
+  padding: 20px;
+  height: 80vh;
+  overflow: hidden;
+  overflow-y: auto;
+  border-radius: 15px;
+  color: #272727;
+  background-color: #FAD9E2;
+}
+.container::-webkit-scrollbar {
+  width: auto;
+}
+
+.container ul li {
+  background-color: #CFF2DE;
+ 
+  height: 50px;
+  list-style: none;
+  cursor: pointer;
+  box-shadow: -7px 9px 23px 6px rgba(95, 59, 59, 0.55) inset;
+  -webkit-box-shadow: -7px 9px 23px 6px rgba(165, 149, 149, 0.55) inset;
+  -moz-box-shadow: -7px 9px 23px 6px rgba(214, 137, 137, 0.55) inset;
+  text-align: center;
+  border-radius: 35px;
+  margin-bottom: 45px;
+}
