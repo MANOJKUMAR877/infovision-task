@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import { Route, Switch, BrowserRouter } from "react-router-dom";
 import Chart from "./Chart";
-import Login from "./Login";
+import Home from './Home'
 import PageNotFound from "./PageNotFound";
-import TablePage from "./TablePage";
+
 export default class RoutingComponent extends Component {
   render() {
     return (
       <BrowserRouter>
         <Switch>
-          <Route path="/" component={Login} exact />
-          <Route path="/tablePage" component={TablePage} />
+          <Route path="/" component={Home} exact />
+          <Route path="/chart" component={Chart} />
           
           <Route path="*" component={PageNotFound} />
         </Switch>
