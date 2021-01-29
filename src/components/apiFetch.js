@@ -2,9 +2,9 @@ import axios from "axios";
 const apiFetch = async () => {
   try {
     let apiValue = await axios.get(
-      ` https://5fc952922af77700165ae75d.mockapi.io/api/task/line-chart`
+      `https://jsonplaceholder.typicode.com/posts`
     );
-    return apiValue;
+    return apiValue.data;
   } catch (error) {
     return error;
   }
