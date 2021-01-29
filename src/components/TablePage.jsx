@@ -1,17 +1,17 @@
 import React, { Component } from "react";
 import apiFetch from "./apiFetch";
-import { Spinner, Table } from "react-bootstrap";
+
 export default class tablePage extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      tableData: {},
+      tableData: [],
       loading: true,
     };
   }
   componentDidMount = async () => {
     let tableData = await apiFetch();
-    this.setState({ loading: false, tableData: tableData });
+    this.setState({ loading: false, tableData: tableData.data });
   };
   render() {
     let { loading, tableData } = this.state;
@@ -34,7 +34,7 @@ export default class tablePage extends Component {
               </tr>
             </thead>
             <tbody>
-              {tableData.data.map((data) => (
+              {tableData.map((data) => (
                 <tr key={data.id}>
                   <td>{data.id}</td>
                   <td>{data.name}</td>

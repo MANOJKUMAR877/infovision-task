@@ -9,18 +9,19 @@ export default class Login extends Component {
     };
   }
   valueChange = (evt) => {
-    this.setState({ [evt.target.name]: evt.target.value });
+    this.setState({ [evt.target.name]: evt.target.value});
   };
   submit = () => {
     let { username, password } = this.state;
     username === password
       ? this.props.history.push("/tablePage")
       :  alert('Incorrect username or password')
+      
   };
   render() {
     return (
       <div>
-        <Form onSubmit={this.submit}>
+        <Form style={{ width: '35rem' ,justifyContent:'center',alignItems:'center',marginLeft:'235px'}} onSubmit={this.submit}>
           <Form.Group controlId="formBasicEmail">
             <Form.Label>UserName</Form.Label>
             <Form.Control
